@@ -3,9 +3,9 @@ export const SITE = {
   name: 'AetherLaunch',
   author: 'Max Bennett',
   handle: 'aoh20119',
-  repo: 'https://github.com/aoh20119/aetherlaunch',
-  releases: 'https://github.com/aoh20119/aetherlaunch/releases/latest',
-  authorLink: 'https://github.com/aoh20119',
+  repo: 'https://github.com/hoatran2k11/aetherlaunch',
+  releases: 'https://github.com/hoatran2k11/aetherlaunch/releases/latest',
+  authorLink: 'https://github.com/hoatran2k11',
 }
 
 // Giờ bắt đầu ban ngày / ban đêm cho chế độ tự động (theo giờ máy người truy cập).
