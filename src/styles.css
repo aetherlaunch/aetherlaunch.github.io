@@ -1,7 +1,7 @@
 /* ============ Design tokens ============ */
 :root {
-  --font: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  --font: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
   --radius: 22px;
   --radius-sm: 14px;
   --accent: #7c5cff;
@@ -11,7 +11,7 @@
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-:root[data-theme='dark'] {
+:root[data-theme="dark"] {
   color-scheme: dark;
   --bg: #0b0d1a;
   --text: #eef0ff;
@@ -28,7 +28,7 @@
   --field-bg: rgba(255, 255, 255, 0.07);
 }
 
-:root[data-theme='light'] {
+:root[data-theme="light"] {
   color-scheme: light;
   --bg: #eef1ff;
   --text: #171a33;
@@ -50,8 +50,12 @@
 .theme-anim *,
 .theme-anim *::before,
 .theme-anim *::after {
-  transition: background-color 0.6s var(--ease), color 0.6s var(--ease),
-    border-color 0.6s var(--ease), box-shadow 0.6s var(--ease), opacity 0.6s var(--ease) !important;
+  transition:
+    background-color 0.6s var(--ease),
+    color 0.6s var(--ease),
+    border-color 0.6s var(--ease),
+    box-shadow 0.6s var(--ease),
+    opacity 0.6s var(--ease) !important;
 }
 
 /* ============ Base ============ */
@@ -165,7 +169,9 @@ main {
   -webkit-backdrop-filter: blur(24px) saturate(170%);
   backdrop-filter: blur(24px) saturate(170%);
   border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow), inset 0 1px 0 var(--glass-hi);
+  box-shadow:
+    var(--glass-shadow),
+    inset 0 1px 0 var(--glass-hi);
 }
 .glass {
   position: relative;
@@ -174,10 +180,14 @@ main {
 }
 /* Đốm sáng bám con trỏ */
 .glass::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(360px circle at var(--mx, 50%) var(--my, -20%), var(--spot), transparent 60%);
+  background: radial-gradient(
+    360px circle at var(--mx, 50%) var(--my, -20%),
+    var(--spot),
+    transparent 60%
+  );
   opacity: 0;
   transition: opacity 0.35s var(--ease);
   pointer-events: none;
@@ -187,7 +197,9 @@ main {
 }
 
 /* Trình duyệt không hỗ trợ blur thì dùng nền đặc hơn */
-@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+@supports not (
+  (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))
+) {
   .glass,
   .glass-flat {
     background: var(--glass-bg-strong);
@@ -234,7 +246,9 @@ main {
   color: var(--muted);
   padding: 7px 14px;
   border-radius: 999px;
-  transition: color 0.2s, background 0.2s;
+  transition:
+    color 0.2s,
+    background 0.2s;
 }
 .nav-links a:hover {
   color: var(--text);
@@ -261,7 +275,9 @@ main {
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
-  transition: transform 0.2s var(--ease), background 0.2s;
+  transition:
+    transform 0.2s var(--ease),
+    background 0.2s;
 }
 .icon-btn:hover {
   background: var(--glass-bg-strong);
@@ -288,7 +304,10 @@ main {
   text-decoration: none;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), background 0.25s;
+  transition:
+    transform 0.25s var(--ease),
+    box-shadow 0.25s var(--ease),
+    background 0.25s;
 }
 .btn:hover {
   transform: translateY(-2px);
@@ -296,10 +315,14 @@ main {
 .btn.primary {
   color: #fff;
   background: var(--grad);
-  box-shadow: 0 10px 28px rgba(124, 92, 255, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 10px 28px rgba(124, 92, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 .btn.primary:hover {
-  box-shadow: 0 14px 34px rgba(124, 92, 255, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 14px 34px rgba(124, 92, 255, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 .btn.ghost {
   color: var(--text);
@@ -362,7 +385,12 @@ main {
   margin: 22px 0 20px;
 }
 .grad {
-  background: linear-gradient(120deg, var(--accent), var(--accent-2) 55%, var(--accent-3));
+  background: linear-gradient(
+    120deg,
+    var(--accent),
+    var(--accent-2) 55%,
+    var(--accent-3)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -469,7 +497,9 @@ main {
   font-weight: 500;
   text-align: left;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
 .mock-side button:hover {
   background: var(--glass-bg);
@@ -490,7 +520,11 @@ main {
   flex: 1;
   padding: 20px;
   border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, rgba(124, 92, 255, 0.35), rgba(34, 211, 238, 0.25));
+  background: linear-gradient(
+    135deg,
+    rgba(124, 92, 255, 0.35),
+    rgba(34, 211, 238, 0.25)
+  );
   border: 1px solid var(--glass-border);
 }
 .mock-chip {
@@ -708,8 +742,7 @@ h2 {
   padding: 22px;
 }
 .presence-top {
-  display: flex;
-  gap: 16px;
+  align-items: center;
 }
 .presence-top > div {
   display: flex;
@@ -730,15 +763,12 @@ h2 {
 }
 .presence-img {
   flex: none;
-  display: grid;
-  place-items: center;
-  width: 78px;
-  height: 78px;
-  border-radius: 16px;
-  font-size: 2rem;
-  font-weight: 800;
-  color: #fff;
-  background: var(--grad);
+  display: block;
+  width: 88px;
+  height: 88px;
+  border-radius: 20px;
+  object-fit: cover;
+  background: none;
 }
 .presence-btn {
   margin-top: 18px;
@@ -791,7 +821,9 @@ h2 {
   opacity: 0;
   transform: translateY(26px);
   filter: blur(8px);
-  transition: opacity 0.8s var(--ease) var(--d, 0ms), transform 0.8s var(--ease) var(--d, 0ms),
+  transition:
+    opacity 0.8s var(--ease) var(--d, 0ms),
+    transform 0.8s var(--ease) var(--d, 0ms),
     filter 0.8s var(--ease) var(--d, 0ms);
 }
 .reveal.in {
@@ -886,9 +918,15 @@ h2 {
   font-size: clamp(2.4rem, 5vw, 4rem); /* trước là clamp(2.5rem, 6vw, 4.4rem) */
 }
 html {
-  scrollbar-width: none;      /* Firefox */
-  -ms-overflow-style: none;   /* Edge/IE cũ */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Edge/IE cũ */
 }
 html::-webkit-scrollbar {
-  display: none;              /* Chrome, Edge, Safari */
+  display: none; /* Chrome, Edge, Safari */
+}
+.code pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
 }

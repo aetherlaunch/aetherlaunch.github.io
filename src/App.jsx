@@ -487,7 +487,7 @@ function DiscordSection() {
         <Reveal delay={120}>
           <Glass className="presence">
             <div className="presence-top">
-              <span className="presence-img">A</span>
+              <img className="presence-img" src="./favicon.png" alt="" width="88" height="88" />
               <div>
                 <small>Đang chơi AetherLaunch</small>
                 <b>GTA Việt Roleplay</b>
