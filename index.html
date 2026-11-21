@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AetherLaunch – SA-MP Launcher kiểu Liquid Glass</title>
+    <meta
+      name="description"
+      content="AetherLaunch: launcher SA-MP phong cách Anime + Material + Liquid Glass, viết bằng Tauri v2 và Rust. Chơi online, offline, quản lý save, Discord Rich Presence."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#0b0d1a" />
+    <meta property="og:title" content="AetherLaunch – SA-MP Launcher" />
+    <meta property="og:description" content="Launcher SA-MP nhẹ, đẹp, Liquid Glass. Tauri v2 + Rust." />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Đặt theme trước khi React chạy để không bị nháy sáng/tối.
+      // auto: 06:00–17:59 giờ máy người truy cập = sáng, còn lại = tối.
+      (function () {
+        try {
+          var m = localStorage.getItem('aether-theme-mode') || 'auto';
+          var h = new Date().getHours();
+          var t = m === 'auto' ? (h >= 6 && h < 18 ? 'light' : 'dark') : m;
+          document.documentElement.dataset.theme = t;
+        } catch (e) {
+          document.documentElement.dataset.theme = 'dark';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
