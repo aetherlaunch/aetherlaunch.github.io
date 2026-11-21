@@ -742,7 +742,9 @@ h2 {
   padding: 22px;
 }
 .presence-top {
+  display: flex;
   align-items: center;
+  gap: 16px;
 }
 .presence-top > div {
   display: flex;
